@@ -1,106 +1,105 @@
-Lab 4: Stacks
-(Dynamic Implementations & Applications)
+# Lab 4: Stacks (Implementations and Dynamic Applications)
 
-Exercise 1: Dynamic Stack Implementation
-Task: Implement a dynamic stack using a linked list with:
+## Exercise 1: Dynamic Stack Implementation
 
-Init_StackD(): Initialize the stack
+**Task**: Implement a dynamic stack using a linked list with the following functions:
 
-StackD_Empty(): Check if empty
+- `Init_StackD()` : Initialize the stack  
+- `StackD_Empty()` : Check if the stack is empty  
+- `PushD()` : Push an element  
+- `PopD()` : Pop the top element  
+- `TopD()` : View the top value  
+- `Display_StackD()` : Print the contents of the stack  
 
-PushD(): Push an element
+**Method**:
 
-PopD(): Pop the top element
+- Use a linked list with a top pointer.
+- `PushD()` allocates memory for new nodes.
+- `PopD()` frees memory using `free()`.
 
-TopD(): Peek the top value
+---
 
-Display_StackD(): Print stack contents
-Method:
+## Exercise 2: Animal Stack Manipulation
 
-Use a linked list with a top pointer.
+**Given functions**:
 
-PushD() allocates memory for new nodes.
+- `push()` : Add an animal to the stack  
+- `pop()` : Remove the top animal  
+- `isEmpty()` : Check if the stack is empty  
 
-PopD() frees memory with free().
+**Implement**:
 
-Exercise 2: Animal Stack Manipulation
-Given Functions:
+- `display(P)` : Print all animals in stack `P`.
+- `peek(P)` : Return the top animal without removing it.
+- `duplicate(P)` : Copy the top animal to the top of the stack.
+- `swap(P)` : Swap the top two animals.
+- `removeBipeds(P)` : Remove all animals with exactly 2 legs.
 
-push(): Add an animal to the stack
+---
 
-pop(): Remove the top animal
+## Exercise 3: Remove Duplicates
 
-isEmpty(): Check if stack is empty
+**Task**: Remove duplicates in a dynamic stack.  
+**Example**:  
+Input: `[5, 10, 15, 10, 20, 5, 25]`  
+Output: `[25, 20, 15, 10, 5]`
 
-Implement:
+**Method**:
 
-display(P): Print all animals in stack P.
+- Use a temporary stack to track unique values.
+- Before pushing, check if the value already exists.
 
-peek(P): Return the top animal without removal.
+---
 
-duplicate(P): Copy the top animal to the stack’s top.
+## Exercise 4: Palindrome Check
 
-swap(P): Swap the top two animals.
+**Task**: Check if a word is a palindrome using a stack.  
+**Examples**:  
+- "radar" →  Palindrome  
+- "Hello" →  Not a palindrome
 
-removeBipeds(P): Delete all animals with exactly 2 legs.
+**Method**:
 
-Exercise 3: Remove Duplicates
-Task: Eliminate duplicate values in a dynamic stack.
-Example:
-Input: [5, 10, 15, 10, 20, 5, 25] → Output: [25, 20, 15, 10, 5]
-Method:
+- Push all characters onto the stack.
+- Compare with the original string.
 
-Use a temporary stack to track unique values.
+---
 
-Before pushing, verify if the value already exists.
+## Exercise 5: Merge Sorted Stacks
 
-Exercise 4: Palindrome Check
-Task: Verify if a word is a palindrome using a stack.
-Examples:
+**Task**: Merge two stacks sorted in descending order into one.  
+**Example**:  
+Stack 1: `[8, 6, 3]`  
+Stack 2: `[7, 5, 2]`  
+Result: `[8, 7, 6, 5, 3, 2]`
 
-"radar" → Palindrome
+**Method**:
 
-"hello" → Not a palindrome
-Method:
+- Use a temporary stack.
+- Compare and push the larger elements first.
 
-Push all characters onto the stack.
+---
 
-Compare with the original string.
+## Exercise 6: Stack Operations
 
-Exercise 5: Merge Sorted Stacks
-Task: Merge two stacks sorted in descending order into one.
-Example:
-Stack 1: [8, 6, 3]
-Stack 2: [7, 5, 2]
-Output: [8, 7, 6, 5, 3, 2]
-Method:
+- Reverse a stack using only standard operations.  
+  Example: `1 → 2 → 3 → 3 → 2 → 1`
 
-Use a temporary stack.
+- Remove consecutive duplicates.  
+  Example: `4 → 4 → 2 → 2 → 3 → 1 → 4 → 2 → 3 → 1`
 
-Compare and push larger elements first.
+---
 
-Exercise 6: Stack Operations
-Reverse a stack using only standard operations.
+## Exercise 7: City Stack (Linked List)
 
-Example: 1 → 2 → 3 → 3 → 2 → 1.
+**Task**: Manage a stack of cities (Boumerdès region) with:
 
-Remove consecutive duplicates.
+- `name` (string)
+- `area` (km²)
+- `population`
 
-Example: 4 → 4 → 2 → 2 → 3 → 1 → 4 → 2 → 3 → 1.
+**Functions**:
 
-Exercise 7: City Stack (Linked List)
-Task: Manage a stack of cities (Boumerdès region) with:
-
-name (string)
-
-area (km²)
-
-population
-
-Functions:
-
-Add "Corso" to the top.
-
-Delete the third city (from the top).
-
-Remove all cities starting with 'B'.
+- Add "Corso" to the top.
+- Remove the third city (from the top).
+- Remove all cities starting with the letter "B".
